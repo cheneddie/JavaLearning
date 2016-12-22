@@ -1,0 +1,23 @@
+將選項改成大寫Ctrl+Shift+X(y)
+切換作用中視圖或編輯器的最大化/還原狀態Ctrl+M
+
+指令
+Examples
+#ch0901
+	C.compareTo(A));//用內碼代表的整數相減A-C=2
+	strValue.replace('a','b'));將String中的a改為b
+	strValue.split("天");String中，用天來分隔，並轉為Array(陣列)
+#ch0902
+	StringBuffer Variable = new StringBuffer();
+	strValue.append("value");尾端加入value
+	strValue.insert(X, "value");在第X位子插入value
+	charValue.setCharAt(x, 'v');在第X位子插入v
+#ch09._05_Generics._01.moreComplex.copy;
+	設計一個自動擴增位子的Array
+#八大型態及object轉換String
+	String.valueOf(八大基本型態 b) : 將型態的變數b 轉換成字串
+	String.valueOf(char[] data, int offset, int count)將 char 陣列 data 中 由 data[offset] 開始取 count 個元素 轉換成字串
+#String轉數值
+	Byte.parseByte(String s) : 將 s 轉換成 byte
+	Byte.parseByte(String s, int radix) : 以 radix 為基底 將 s 轉換為 byte
+	比如說 Byte.parseByte("11", 16) 會得到 17
