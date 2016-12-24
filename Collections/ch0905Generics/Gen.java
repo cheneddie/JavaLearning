@@ -1,4 +1,5 @@
-package ch09._05_Generics._01.moreComplex.copy;
+package ch0905Generics;
+
 
 public class Gen<T> {
     private T data;
@@ -16,7 +17,7 @@ public class Gen<T> {
     }
     public void addWithLimit(T data) throws Exception{
     	if (idx >= capacity) {
-    		throw new Exception("¤¸¯À¼Æ¶q¶W¹L³Ì¤j­È:"+capacity);
+    		throw new Exception("ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶qï¿½Wï¿½Lï¿½Ì¤jï¿½ï¿½:"+capacity);
     		
     	}
     	container[idx]= data;
@@ -30,7 +31,7 @@ public class Gen<T> {
     	}
     }
     
-    // ¦¹¬q±Ô­z·|¦Û°ÊÂX¥R°}¦Cªº¤¸¯À­Ó¼Æ
+    // ï¿½ï¿½ï¿½qï¿½Ô­zï¿½|ï¿½Û°ï¿½ï¿½Xï¿½Rï¿½}ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¼ï¿½
 //    T[] container =  (T[])(new Object[capacity]);
     public void add(T data){
     	container[idx]= data;

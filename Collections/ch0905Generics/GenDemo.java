@@ -1,4 +1,4 @@
-package ch09._05_Generics._01.moreComplex.copy;
+package ch0905Generics;
 
 public class GenDemo {
 	public static void main(String[] args) throws Exception {

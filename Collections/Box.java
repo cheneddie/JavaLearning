@@ -1,4 +1,4 @@
-package Collections;
+
 
 public class Box implements Comparable<Box>{
 	int width,height,depth;
