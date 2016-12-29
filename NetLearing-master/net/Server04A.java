@@ -1,9 +1,9 @@
 package net;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -23,15 +23,24 @@ public class Server04A {
 			InputStream is = sock.getInputStream();
 			OutputStream os = sock.getOutputStream();
 //			DataOutputStream dos = new DataOutputStream(os);
-//			DataInputStream dis = new DataInputStream(is);
-			FileInputStream fis = new FileInputStream
-					              ("D:\\Java004\\rt.jar");
+			ObjectInputStream ois = new ObjectInputStream(is);
+			FileData fd = (FileData) ois.readObject();
+			String filename = fd.getFilename();
+			long   filesize = fd.getFileSize();
+			String path = "D:\\Java004";
+            File file = new File(path, filename);
+			FileInputStream fis = new FileInputStream(file);
+			fis.skip(filesize);   // <=========
+			System.out.println("S: 已跳過(skip)" + filesize + "個位元組");
 			int count = 0;
 			byte[] b = new byte[8192];
 			int len = 0 ;
 			while ((len=fis.read(b))!=-1){
 				os.write(b, 0, len);
 				count += len;
+				if (count > 63294833 / 2) {
+					break;
+				}
 			}
 			System.out.println("S: 送出" + count + "位元組");
 			os.close();

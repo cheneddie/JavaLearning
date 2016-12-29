@@ -1,4 +1,4 @@
-package src;
+package net;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -17,15 +17,15 @@ public class Client02 {
 	public void connect(){
     	try {
 			Socket sock = new Socket(ip , portNo);
-			System.out.println("C: ï¿½wï¿½gï¿½Pï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½sï¿½u");
+			System.out.println("C: ¤w¸g»P¦øªA¾¹³s½u");
 			InputStream is = sock.getInputStream();
 			OutputStream os = sock.getOutputStream();
 			DataInputStream dis = new DataInputStream(is);
 			DataOutputStream dos = new DataOutputStream(os);
 			long n = dis.readLong();
-			System.out.println("C: Åªï¿½ï¿½" + n);
+			System.out.println("C: Åª¨ì" + n);
 			dos.writeLong(n*2);
-			System.out.println("C: ï¿½gï¿½^" + n*2);
+			System.out.println("C: ¼g¦^" + n*2);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

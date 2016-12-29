@@ -6,7 +6,5 @@
 	<classpathentry kind="src" path="NetLearing-master"/>
 	<classpathentry kind="src" path="Pet07Eddie"/>
 	<classpathentry kind="src" path="StartThreadDemo"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="/JavaExamplesL2/jsoup-1.8.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
